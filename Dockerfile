@@ -2,11 +2,11 @@ FROM node:14 as frontend
 
 WORKDIR /usr/app/frontend
 
-COPY frontend/package*.json .
+COPY frontend/package*.json ./
 
 RUN npm install
 
-COPY frontend/ .
+COPY frontend/ ./
 
 RUN npm run build
 
@@ -16,10 +16,10 @@ WORKDIR /usr/src/app/backend
 
 COPY --from=frontend /usr/app/frontend/build/ ./build
 
-COPY backend/package*.json .
+COPY backend/package*.json ./
 
 RUN npm install
 
-COPY backend .
+COPY backend ./
 
 CMD ["npm", "start"]
