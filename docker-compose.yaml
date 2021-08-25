@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  server:
+    build: .
+    ports:
+      - 5000:5000
+    networks:
+      - weather-app-network
+    environment:
+      - NODE_ENV=production
+      - SERVERPORT=5000
+      - REDISHOST=redis
+      - REDISPORT=6379
+      - TOMORROWIOAPIKEY=your_key_here
+      - OPENWEATHERMAPAPIKEY=your_key_here
+  redis:
+    image: redis
+    networks:
+      - weather-app-network
+
+networks:
+  weather-app-network:
+    driver: bridge

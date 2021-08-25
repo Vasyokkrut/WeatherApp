@@ -1,0 +1,57 @@
+body {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 2rem;
+  background: linear-gradient(45deg, rgb(178, 186, 206), rgb(103, 106, 231));
+  height: 100vh;
+  color: white;
+}
+
+header {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.request-button {
+  color: inherit;
+  margin: 2rem;
+  box-shadow: .5rem .5rem 1rem 0 rgb(75, 75, 75);
+  cursor: pointer;
+  width: 20rem;
+  font-size: 2rem;
+  height: 4rem;
+  background-color: rgb(16, 61, 209);
+  border: none;
+  border-radius: .5rem;
+}
+
+.request-button:disabled {
+  background-color: rgb(105, 135, 235);
+  opacity: .8;
+  cursor: default;
+}
+
+.info {
+  border-radius: .5rem;
+  padding: 1rem;
+  background-color: rgb(16, 61, 209);
+  min-width: 40%;
+}
+
+.info > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  height: 1px;
+  background-color: white;
+  border: none;
+}
